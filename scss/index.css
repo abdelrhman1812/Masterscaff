@@ -375,7 +375,7 @@ nav:hover {
 .footer {
   position: relative;
   margin: 40px 0;
-  background: url("/image//Footer.jpg");
+  background: url("../image//Footer.jpg");
   color: #fff;
 }
 .footer .icon {
