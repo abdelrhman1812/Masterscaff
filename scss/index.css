@@ -48,6 +48,7 @@ header .label_skitter {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 50px 0;
 }
 header .skitter {
   position: relative;
@@ -358,8 +359,7 @@ nav:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border-radius: 40%;
+  border-radius: 50%;
   color: #777;
   border: 1px solid #BE2623;
 }
