@@ -21,6 +21,7 @@ a:hover {
   text-align: center;
   color: #777;
   font-weight: 200;
+  font-family: cursive;
 }
 
 .bg-heaing {
@@ -64,7 +65,9 @@ header .skitter {
   background: black;
 }
 header h3 {
-  font-size: 40px;
+  font-size: 57px;
+  font-weight: bold;
+  font-family: serif;
 }
 header span {
   color: #fff;
@@ -314,15 +317,19 @@ nav:hover {
   box-sizing: 100% 100%;
 }
 .projects .imgHtml i {
+  margin: 5px;
   cursor: pointer;
   background-color: #fff;
   color: #BE2623;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+}
+.projects .infoo {
+  z-index: 999999;
 }
 
 /* ===================== Events ===============  */
