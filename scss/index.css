@@ -374,7 +374,7 @@ nav:hover {
 /* ===================== Footer ===============  */
 .footer {
   position: relative;
-  margin: 40px 0;
+  margin-top: 40px;
   background: url("../image//Footer.jpg");
   color: #fff;
 }
