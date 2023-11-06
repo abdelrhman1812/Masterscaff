@@ -2,9 +2,10 @@
 
 
 $(document).ready(function() {
+  
     $(".skitter-large").skitter(
       {
-        itemes:3
+        itemes:1
       }
     );
   });
@@ -90,7 +91,7 @@ iClose.addEventListener("click", function () {
 });
 
 
-/* navbar */
+/* Change Backgroung  */
 
 // function changeColor() {
 //   let navbar = document.getElementById("navbar");
