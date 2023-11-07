@@ -415,9 +415,6 @@ nav:hover {
   border-radius: 50%;
   color: #777;
   border: 1px solid #BE2623;
-}
-.contact .icon:hover {
-  background-color: #BE2623;
   color: #fff;
 }
 .contact span {
@@ -427,7 +424,6 @@ nav:hover {
 /* ===================== Footer ===============  */
 .footer {
   position: relative;
-  margin-top: 40px;
   background: url("../image//footer.jpg");
   color: #fff;
 }
@@ -442,7 +438,6 @@ nav:hover {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 4px solid rgba(190, 38, 35, 0.2784313725);
   font-size: 30px;
 }
 .footer .icon:hover {
@@ -508,12 +503,38 @@ nav:hover {
 /* About Us */
 .about-us {
   background: url("../image/aboutpage.jpg");
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   background-color: #000;
   position: relative;
   background-size: cover;
   background-position: center center;
+}
+.about-us .layout {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.71);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.about-us .layout .text {
+  max-width: 600px;
+  background-color: rgba(242, 242, 242, 0.3607843137);
+  color: #fff;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.about-us .layout .text p {
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 600;
+  padding-left: 50px;
+}
+.about-us .layout .text h2 {
+  padding-left: 50px;
+  font-size: 30px;
 }
 .about-us .waves {
   position: absolute;
