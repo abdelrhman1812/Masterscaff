@@ -1,3 +1,31 @@
+
+
+let nums=document.querySelectorAll(".num")
+console.log(nums)
+
+let interval=5000;
+
+nums.forEach((num)=>{
+
+  let startValue=0;
+  let endValue=parseInt(num.getAttribute("data-val"));
+  console.log(endValue);
+
+  let duration=Math.floor(interval / endValue);
+  let counter=setInterval(()=>{
+
+    startValue +=1;
+    num.textContent=startValue;
+    if(startValue ==endValue){
+      clearInterval(counter)
+    }
+  },duration)
+
+})
+
+
+
+
 /* ================ Slider ===============  */
 
 

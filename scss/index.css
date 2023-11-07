@@ -1,4 +1,19 @@
 /* ===================== Variable ===============  */
+.services .ser-info .icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #777;
+  border: 1px solid #BE2623;
+}
+.services .ser-info .icon:hover {
+  background-color: #BE2623;
+  color: #fff;
+}
+
 /* ===================== Global ===============  */
 * {
   box-sizing: border-box;
@@ -171,8 +186,13 @@ nav:hover {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  height: 500px;
+  height: 40vh;
   position: relative;
+}
+@media (max-width: 767px) {
+  .details {
+    height: 800px;
+  }
 }
 .details .details-layout {
   position: absolute;
@@ -199,7 +219,7 @@ nav:hover {
   margin: auto;
 }
 .details .icons {
-  background-color: #BE2623;
+  background-color: rgba(255, 193, 7, 0.8117647059);
   padding: 10px;
   border-radius: 20px;
   display: flex;
@@ -208,10 +228,28 @@ nav:hover {
   flex-direction: column;
   margin: auto;
   transition: all 1s;
+  width: 100px;
+  height: 100px;
 }
 .details .icons:hover {
   background-color: transparent;
-  border: 1px solid #BE2623;
+  border: 1px solid yellow;
+}
+.details .details-info {
+  background-color: #f2f2f2;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+  border-radius: 10px;
+  border-bottom: 5px solid #BE2623;
+}
+.details .details-info i {
+  color: #BE2623;
+  font-size: 30px;
+  margin: 10px;
 }
 
 /* Info About */
@@ -368,6 +406,7 @@ nav:hover {
   padding: 50px 0;
 }
 .contact .icon {
+  background-color: #BE2623;
   width: 50px;
   height: 50px;
   display: flex;
@@ -389,8 +428,11 @@ nav:hover {
 .footer {
   position: relative;
   margin-top: 40px;
-  background: url("../image//Footer.jpg");
+  background: url("../image//footer.jpg");
   color: #fff;
+}
+.footer .logo {
+  width: 150px;
 }
 .footer .icon {
   width: 50px;
@@ -407,7 +449,7 @@ nav:hover {
   background-color: #BE2623;
 }
 .footer .layout {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.06);
   width: 100%;
   height: 100%;
   padding: 50px 0;
@@ -462,4 +504,177 @@ nav:hover {
 }
 
 /* ===================== ===============  */
-/* ============  Test ============= *//*# sourceMappingURL=index.css.map */
+/* ============  Test ============= */
+/* About Us */
+.about-us {
+  background: url("../image/aboutpage.jpg");
+  height: 50vh;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+.about-us .waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.masterscaf {
+  position: relative;
+}
+.masterscaf .image {
+  overflow: hidden;
+  transition: all 1s;
+}
+.masterscaf .info {
+  position: relative;
+  transition: all 1s;
+}
+.masterscaf .info::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #BE2623;
+  top: 0;
+  bottom: 0;
+  left: -2px;
+}
+
+.services {
+  background-color: #fff;
+  padding: 50px 0;
+}
+.services .ser-info {
+  transition: all 1s ease;
+}
+.services .ser-info .icon {
+  margin: auto;
+}
+.services .ser-info h5 {
+  color: #BE2623;
+  font-family: cursive;
+}
+.services .ser-info p {
+  font-size: 18px;
+  color: #777;
+}
+.services .ser-info:hover {
+  transform: scale(1.1);
+}
+.services .ser-info:hover .icon {
+  background-color: #BE2623;
+  color: #fff;
+}
+
+/* =================== certificates =============== */
+.certificates {
+  padding: 50px 0;
+}
+.certificates .cards {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.certificates .cards .cer1 {
+  background-color: #007e9e;
+}
+.certificates .cards .cer2 {
+  background-color: #0062ff;
+}
+.certificates .cards .cer3 {
+  background-color: #18cd5e;
+}
+.certificates .cards .card {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 25%;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+.certificates .cards .card:hover {
+  transform: scale(1.2, 1.2);
+}
+.certificates .cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
+
+/* =================== teamwork =============== */
+.teamwork {
+  background-color: #fff;
+  padding: 50px 0;
+}
+.teamwork .item {
+  height: 280px;
+  border-radius: 32px;
+  position: relative;
+  box-shadow: rgba(96, 75, 74, 0.69) 1px -1px 4px 0px;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+.teamwork .item .profile {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 29px;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+}
+.teamwork .item .profile img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out 0s;
+}
+.teamwork .item .info-item {
+  position: absolute;
+  z-index: 2;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  top: 80%;
+  border-radius: 29px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+.teamwork .item .info-item .content {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  height: 160px;
+}
+.teamwork .item:hover .info-item {
+  top: 20%;
+  border-radius: 80px 29px 29px 29px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+.teamwork .item:hover .profile {
+  width: 100px;
+  height: 100px;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 3;
+  border: 7px solid #BE2623;
+  box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+  transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+}
+.teamwork .item-name {
+  background-color: rgba(220, 53, 69, 0.8);
+  border-radius: 26px;
+  color: white;
+  font-family: math;
+}/*# sourceMappingURL=index.css.map */
