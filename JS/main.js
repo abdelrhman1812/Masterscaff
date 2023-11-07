@@ -121,15 +121,15 @@ iClose.addEventListener("click", function () {
 
 /* Change Backgroung  */
 
-// function changeColor() {
-//   let navbar = document.getElementById("navbar");
-//   let scroll = window.scrollY;
-//   if (scroll < 150) {
-//     navbar.classList.remove("bg-nav");
+function changeColor() {
+  let navbar = document.getElementById("navbar");
+  let scroll = window.scrollY;
+  if (scroll < 150) {
+    navbar.classList.remove("bg-nav");
     
-//   } else {
-//     navbar.classList.add("bg-nav");
-//   }
-// }
+  } else {
+    navbar.classList.add("bg-nav");
+  }
+}
 
-// window.addEventListener("scroll", changeColor);
+window.addEventListener("scroll", changeColor);

@@ -1,4 +1,12 @@
 /* ===================== Variable ===============  */
+.bg-nav {
+  background-color: #fff !important;
+}
+
+.bg-active {
+  background-color: #BE2623 !important;
+}
+
 .services .ser-info .icon {
   width: 50px;
   height: 50px;
@@ -84,9 +92,16 @@ header h3 {
   font-weight: bold;
   font-family: serif;
 }
+@media (max-width: 551px) {
+  header h3 {
+    font-size: 30px;
+  }
+}
 header span {
   color: #fff;
   font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
 }
 header .btn {
   margin: 5px;
@@ -105,25 +120,42 @@ nav .logo {
 nav ul {
   color: #fff !important;
 }
+@media (max-width: 767px) {
+  nav ul {
+    background-color: rgba(0, 0, 0, 0.9294117647);
+    padding: 20px;
+    position: absolute;
+    top: 68px;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+  }
+}
 nav li.nav-item {
   position: relative;
   text-align: left;
 }
-nav .nav-link.active::before {
-  content: "";
-  position: absolute;
-  width: 68%;
-  height: 1px;
-  background-color: #BE2623;
-  bottom: 0;
-  transition: all 0.3s;
+nav li.nav-item a {
+  background-color: #1b1c1d;
+  padding: 5px;
+  margin: 5px;
+  color: #fff !important;
+  display: block;
+  border-radius: 10px;
+  transition: all 0.5s ease;
 }
-nav:hover {
-  border-bottom: 1px solid #BE2623;
+@media (max-width: 767px) {
+  nav li.nav-item a {
+    background-color: transparent !important;
+    padding: 30px;
+    border-bottom: 1px solid #BE2623;
+  }
+  nav li.nav-item a:hover {
+    margin-left: 10px !important;
+  }
 }
-
-.navbar-nav .nav-link {
-  text-align: left;
+nav .navbar-toggler {
+  color: #be2623;
 }
 
 /* ===================== About ===============  */
