@@ -17,15 +17,10 @@ $font-p: 18px;
     background-color: $main-color !important;
 }
 
-%urlImg {
 
-    background-size: cover;
-    background-position: center center;
-}
 
 %icon-sec {
 
-    // background-color: $main-color;
     width: 50px;
     height: 50px;
     display: flex;
@@ -90,9 +85,7 @@ body {
     background-color: $bg-section;
 
 
-    @include responsive(761px) {
-        //   background-color:#BE2623;
-    }
+
 
 }
 
@@ -182,15 +175,15 @@ nav {
     ul {
         color: #fff !important;
 
-        @include responsive(767px) {
+        @include responsive(991px) {
             background-color: #000000ed;
-
             padding: 20px;
             position: absolute;
             top: 68px;
             width: 100%;
             height: 100vh;
             left: 0;
+
 
         }
 
@@ -208,11 +201,25 @@ nav {
             display: block;
             border-radius: 10px;
             transition: all 0.5s ease;
+            position: relative;
 
-            @include responsive(767px) {
+            @include responsive(991px) {
                 background-color: transparent !important;
-                padding: 30px;
-                border-bottom: 1px solid $main-color;
+                // border-bottom: 1px solid #fff;
+                text-align: left;
+                padding-left: 30px;
+                padding-bottom: 20px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-color: #BE2623;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                }
+
 
                 &:hover {
                     margin-left: 10px !important;
@@ -723,7 +730,7 @@ nav {
 
 //         @include responsive(767px) {
 //             height: 100% !important;
-//         //   display: block; // الارتفاع الثابت الذي ترغب في تعيينه للعنصر في شاشات الهواتف المحمولة
+//         //   display: block; 
 //         }
 //       }
 //     }
@@ -778,13 +785,7 @@ nav {
 
     }
 
-    .waves {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        top: 0;
-        bottom: 0;
-    }
+
 }
 
 .masterscaf {
@@ -1011,7 +1012,7 @@ nav {
     }
 }
 
-/* ===================== sytem =============== */
+/* ===================== sytem page =============== */
 
 .sytem {
     background: url("../image/systems.jpg");
@@ -1031,11 +1032,31 @@ nav {
         justify-content: start;
         align-items: center;
 
+        .text {
+
+            max-width: 600px;
+            background-color: #f2f2f25c;
+            color: #fff;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+
+            p {
+                font-size: $font-p;
+                line-height: 1.8;
+                font-weight: 600;
+                padding-left: 50px;
+            }
+
+            h2 {
+                padding-left: 50px;
+                font-size: $font-four;
+            }
+
+        }
 
     }
-
-
 }
+
 
 .sec-system {
     .item {
@@ -1097,10 +1118,292 @@ nav {
 
 
 
+}
+
+
+/* ========== Project Page =============== */
+.project {
+    background: url("../image/projectpage.jpg");
+    height: 60vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+    .layout {
+        position: absolute;
+        background-color: rgb(0 0 0 / 71%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        .text {
+
+            max-width: 600px;
+            background-color: #f2f2f25c;
+            color: #fff;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+
+            p {
+                font-size: $font-p;
+                line-height: 1.8;
+                font-weight: 600;
+                padding-left: 50px;
+            }
+
+            h2 {
+                padding-left: 50px;
+                font-size: $font-four;
+            }
+
+        }
+
+    }
+
+}
+
+.sec-project {
+    .project-info {
+        border-radius: 20px;
+        background: #f5f5f5;
+        position: relative;
+        border: 2px solid #c3c6ce;
+        transition: 0.5s ease-out;
+        min-height: 250px;
 
 
 
+        .button {
+            transform: translate(-50%, 125%);
+            background-color: $main-color;
+            transition: 0.3s ease-out;
+            text-decoration: none;
+            border-radius: 16px;
+            position: absolute;
+            text-align: center;
+            cursor: pointer;
+            color: #fff;
+            border: none;
+            opacity: 0;
+            width: 70%;
+            bottom: 0;
+            left: 50%;
+        }
+
+        &:hover {
+            border-color: $main-color;
+            box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+
+        }
+
+        &:hover .button {
+
+            transform: translate(-50%, 50%);
+            opacity: 1;
+        }
+    }
+
+
+    h4 {
+        font-size: 20px;
+    }
 
 
 
+}
+
+
+/* ========== polivardo Page =============== */
+
+.polivardo {
+
+    h1 {
+        color: $main-color;
+    }
+}
+
+/* ========== event page */
+
+.events {
+    background: url("../image/projectpage.jpg");
+    height: 60vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+    .layout {
+        position: absolute;
+        background-color: rgb(0 0 0 / 71%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        .text {
+
+            max-width: 600px;
+            background-color: #f2f2f25c;
+            color: #fff;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+
+            p {
+                font-size: $font-p;
+                line-height: 1.8;
+                font-weight: 600;
+                padding-left: 50px;
+            }
+
+            h2 {
+                padding-left: 50px;
+                font-size: $font-four;
+            }
+
+        }
+
+    }
+}
+
+
+
+.bg-sec {
+    background-color: #212529;
+}
+
+.slider-img {
+
+    width: 30%;
+
+    .child {
+        transition: all 1s;
+
+        &:hover {
+            transform: scale(1.1);
+
+
+        }
+    }
+}
+
+.main-image {
+    position: relative;
+    margin-left: 20px;
+
+    width: 60%;
+
+    .btns {
+
+        .negative,
+        .plus {
+            position: absolute;
+            bottom: -50px;
+            background-color: $main-color;
+            border: none;
+            color: #fff;
+        }
+
+        .negative {
+            left: 20%;
+        }
+
+        .plus {
+            right: 20%;
+        }
+
+    }
+
+    #parent {
+
+        border-radius: 20px;
+        transition: all 1s;
+
+
+        &:hover {
+            transform: scale(1.1);
+
+
+        }
+
+    }
+}
+
+
+/* Contacts */
+
+
+.contact-us {
+    background: url("../image/contact.jpg");
+    height: 60vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+
+    .layout {
+        position: absolute;
+        background-color: rgb(0 0 0 / 71%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
+.sec-contact {
+
+    .map {
+        padding: 15px;
+        border-radius: 20px;
+
+        iframe {
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    .form-input {
+        border: 1px solid #be262324;
+        padding: 15px;
+        border-radius: 20px;
+
+        input {
+            margin: 10px 0;
+            width: 48%;
+            outline: none !important;
+            transition: all 0.5s;
+            box-shadow: none;
+            border-radius: 15px;
+
+            &:focus {
+                border-color: $main-color;
+            }
+
+            @include responsive(761px) {
+                width: 100%;
+            }
+
+        }
+
+        textarea {
+            outline: none !important;
+            transition: all 0.5s;
+            box-shadow: none;
+
+
+
+            &:hover {
+                border-color: $main-color;
+            }
+        }
+    }
 }

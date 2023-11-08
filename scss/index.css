@@ -55,6 +55,7 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #f2f2f2;
 }
+
 /* ===================== Header ===============  */
 header .home {
   height: 100vh;
@@ -120,7 +121,7 @@ nav .logo {
 nav ul {
   color: #fff !important;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   nav ul {
     background-color: rgba(0, 0, 0, 0.9294117647);
     padding: 20px;
@@ -143,12 +144,23 @@ nav li.nav-item a {
   display: block;
   border-radius: 10px;
   transition: all 0.5s ease;
+  position: relative;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   nav li.nav-item a {
     background-color: transparent !important;
-    padding: 30px;
-    border-bottom: 1px solid #BE2623;
+    text-align: left;
+    padding-left: 30px;
+    padding-bottom: 20px;
+  }
+  nav li.nav-item a::after {
+    content: "";
+    position: absolute;
+    background-color: #BE2623;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
   }
   nav li.nav-item a:hover {
     margin-left: 10px !important;
@@ -568,13 +580,6 @@ nav .navbar-toggler {
   padding-left: 50px;
   font-size: 30px;
 }
-.about-us .waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-}
 
 .masterscaf {
   position: relative;
@@ -742,7 +747,7 @@ nav .navbar-toggler {
   background-color: rgba(220, 53, 69, 0.8);
 }
 
-/* ===================== sytem =============== */
+/* ===================== sytem page =============== */
 .sytem {
   background: url("../image/systems.jpg");
   height: 60vh;
@@ -760,6 +765,23 @@ nav .navbar-toggler {
   display: flex;
   justify-content: start;
   align-items: center;
+}
+.sytem .layout .text {
+  max-width: 600px;
+  background-color: rgba(242, 242, 242, 0.3607843137);
+  color: #fff;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.sytem .layout .text p {
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 600;
+  padding-left: 50px;
+}
+.sytem .layout .text h2 {
+  padding-left: 50px;
+  font-size: 30px;
 }
 
 .sec-system .item {
@@ -809,4 +831,218 @@ nav .navbar-toggler {
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+/* ========== Project Page =============== */
+.project {
+  background: url("../image/projectpage.jpg");
+  height: 60vh;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+.project .layout {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.71);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.project .layout .text {
+  max-width: 600px;
+  background-color: rgba(242, 242, 242, 0.3607843137);
+  color: #fff;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.project .layout .text p {
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 600;
+  padding-left: 50px;
+}
+.project .layout .text h2 {
+  padding-left: 50px;
+  font-size: 30px;
+}
+
+.sec-project .project-info {
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  min-height: 250px;
+}
+.sec-project .project-info .button {
+  transform: translate(-50%, 125%);
+  background-color: #BE2623;
+  transition: 0.3s ease-out;
+  text-decoration: none;
+  border-radius: 16px;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  opacity: 0;
+  width: 70%;
+  bottom: 0;
+  left: 50%;
+}
+.sec-project .project-info:hover {
+  border-color: #BE2623;
+  box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+}
+.sec-project .project-info:hover .button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+.sec-project h4 {
+  font-size: 20px;
+}
+
+/* ========== polivardo Page =============== */
+.polivardo h1 {
+  color: #BE2623;
+}
+
+/* ========== event page */
+.events {
+  background: url("../image/projectpage.jpg");
+  height: 60vh;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+.events .layout {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.71);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.events .layout .text {
+  max-width: 600px;
+  background-color: rgba(242, 242, 242, 0.3607843137);
+  color: #fff;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.events .layout .text p {
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 600;
+  padding-left: 50px;
+}
+.events .layout .text h2 {
+  padding-left: 50px;
+  font-size: 30px;
+}
+
+.bg-sec {
+  background-color: #212529;
+}
+
+.slider-img {
+  width: 30%;
+}
+.slider-img .child {
+  transition: all 1s;
+}
+.slider-img .child:hover {
+  transform: scale(1.1);
+}
+
+.main-image {
+  position: relative;
+  margin-left: 20px;
+  width: 60%;
+}
+.main-image .btns .negative,
+.main-image .btns .plus {
+  position: absolute;
+  bottom: -50px;
+  background-color: #BE2623;
+  border: none;
+  color: #fff;
+}
+.main-image .btns .negative {
+  left: 20%;
+}
+.main-image .btns .plus {
+  right: 20%;
+}
+.main-image #parent {
+  border-radius: 20px;
+  transition: all 1s;
+}
+.main-image #parent:hover {
+  transform: scale(1.1);
+}
+
+/* Contacts */
+.contact-us {
+  background: url("../image/contact.jpg");
+  height: 60vh;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+.contact-us .layout {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.71);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.sec-contact .map {
+  padding: 15px;
+  border-radius: 20px;
+}
+.sec-contact .map iframe {
+  width: 100%;
+  border-radius: 5px;
+}
+.sec-contact .form-input {
+  border: 1px solid rgba(190, 38, 35, 0.1411764706);
+  padding: 15px;
+  border-radius: 20px;
+}
+.sec-contact .form-input input {
+  margin: 10px 0;
+  width: 48%;
+  outline: none !important;
+  transition: all 0.5s;
+  box-shadow: none;
+  border-radius: 15px;
+}
+.sec-contact .form-input input:focus {
+  border-color: #BE2623;
+}
+@media (max-width: 761px) {
+  .sec-contact .form-input input {
+    width: 100%;
+  }
+}
+.sec-contact .form-input textarea {
+  outline: none !important;
+  transition: all 0.5s;
+  box-shadow: none;
+}
+.sec-contact .form-input textarea:hover {
+  border-color: #BE2623;
 }/*# sourceMappingURL=index.css.map */
