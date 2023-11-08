@@ -208,6 +208,25 @@
 
     <script src="JS/bootstrap.bundle.min.js"></script>
     <script src="JS/main.js"></script>
+    <script>
+        /* Change Backgroung  */
+
+        function changeColor() {
+            let navbar = document.getElementById("navbar");
+            let scroll = window.scrollY;
+            if (scroll < 150) {
+                navbar.classList.remove("bg-nav");
+
+            } else {
+                navbar.classList.add("bg-nav");
+            }
+        }
+
+        window.addEventListener("scroll", changeColor);
+
+
+
+    </script>
 
 </body>
 
