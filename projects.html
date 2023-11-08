@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>About</title>
+    <title>Project</title>
     <link rel="icon" href="image/logo.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -29,7 +29,7 @@
     <nav id="navbar" class="navbar navbar-expand-lg shadow  position-fixed start-0 end-0 fixed-top wow fadeIn "
         data-wow-delay="0.5s" data-wow-duration="2s" data-wow-delay="0.0.5s">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="image/logo.png" alt="logo" class="logo  wow swing " data-wow-delay="1s">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -64,7 +64,7 @@
                         <a class="nav-link" href="#">Media</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
 
 
@@ -88,12 +88,12 @@
 
     <section class=" sec-project   py-5   ">
 
-        <h2 class="specail_h1  wow swing  " data-wow-delay="0.7"> Pro<span class="bg-heaing wow swing  "
+        <h2 class="specail_h1 wow swing  " data-wow-delay="0.7"> Pro<span class="bg-heaing wow swing  "
                 data-wow-delay="0.7">jects </span></h2>
         <div class="container py-5">
             <div class="row g-3" id="project">
-                <div class="col-6 col-md-4 ">
-                    <div class="project-info pb-2">
+                <div class="col-md-4 my-3 wow animate__animated animate__bounceIn animate__slow">
+                    <div class=" project-info pb-2">
 
                         <div class="image">
                             <img src="image/project/POLIVARDO BUILDING/POLIVARDO BUILDING.jpg" class="w-100 rounded-4"
@@ -107,7 +107,7 @@
                 </div>
 
 
-                <div class="col-6 col-md-4 ">
+                <div class=" col-md-4 my-3 wow animate__animated animate__bounceIn animate__slow">
                     <div class="project-info pb-2">
 
                         <div class="image">
@@ -124,7 +124,7 @@
 
 
 
-                <div class="col-6 col-md-4 ">
+                <div class=" col-md-4 my-3 wow animate__animated animate__bounceIn animate__slow">
                     <div class="project-info pb-2">
 
                         <div class="image">
@@ -146,7 +146,7 @@
     </section>
 
     <!-- ============ Footer ================ -->
-    <div class="footer">
+    <footer>
         <div class="layout">
             <div class="container">
                 <div class="row g-3 row-footer">
@@ -217,9 +217,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
+    </footer>
 
 
 
@@ -233,8 +231,14 @@
 
 
     <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/wow.min.js"></script>
     <script src="JS/main.js"></script>
+    <script>
 
+
+        new WOW().init();
+
+    </script>
 </body>
 
 </html>

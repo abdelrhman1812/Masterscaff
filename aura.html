@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>cbd</title>
+    <title>AURA</title>
     <link rel="icon" href="image/logo.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -28,7 +28,7 @@
     <nav id="navbar" class="navbar navbar-expand-lg shadow  position-fixed start-0 end-0 fixed-top wow fadeIn "
         data-wow-delay="0.5s" data-wow-duration="2s" data-wow-delay="0.0.5s">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="image/logo.png" alt="logo" class="logo  wow swing " data-wow-delay="1s">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,16 +42,16 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link " href="#">About</a>
+                        <a class="nav-link " href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link bg-active" href="systems.html">Systems</a>
+                        <a class="nav-link " href="systems.html">Systems</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="projects.html">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Events</a>
+                        <a class="nav-link" href="event.html">Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Downloads</a>
@@ -63,7 +63,7 @@
                         <a class="nav-link" href="#">Media</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
 
 
@@ -74,10 +74,10 @@
     </nav>
     <section class="polivardo py-5 ">
         <div class="title py-5 text-center">
-            <h1 class="py-5">AURA PROJECT CFC</h1>
+            <h1 class="py-5 wow swing">AURA PROJECT CFC</h1>
         </div>
-        <div class="container">
-            <div class="row gy-2 bg-sec rounded-2">
+        <div class="container ">
+            <div class="row gy-2 bg-sec rounded-2 wow animate__animated animate__bounceIn animate__slow">
                 <div class="col-lg-6 rounded-2 d-flex align-items-center">
                     <div class="slider-img d-flex justify-content-center align-items-center  flex-column ">
 
@@ -135,7 +135,7 @@
 
 
     <!-- ============ Footer ================ -->
-    <div class="footer">
+    <footer>
         <div class="layout">
             <div class="container">
                 <div class="row g-3 row-footer">
@@ -206,7 +206,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
 
 
@@ -222,7 +222,14 @@
 
 
     <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/wow.min.js"></script>
     <script src="JS/main.js"></script>
+    <script>
+
+
+        new WOW().init();
+
+    </script>
 
 </body>
 

@@ -29,7 +29,7 @@
     <nav id="navbar" class="navbar navbar-expand-lg shadow  position-fixed start-0 end-0 fixed-top wow fadeIn "
         data-wow-delay="0.5s" data-wow-duration="2s" data-wow-delay="0.0.5s">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="image/logo.png" alt="logo" class="logo  wow swing " data-wow-delay="1s">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -64,7 +64,7 @@
                         <a class="nav-link" href="#">Media</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
 
 
@@ -97,7 +97,7 @@
             <div class="row g-3">
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <div class="item">
+                    <div class="item wow animate__animated animate__bounceIn animate__slow">
                         <div class="layout text-center d-flex justify-content-center align-items-center">
                             <p class="text-light">Masterscaff is distinguished by the manufacture and quality of Big
                                 steel panel for
@@ -116,7 +116,7 @@
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <div class="item">
+                    <div class="item wow animate__animated animate__bounceIn animate__slow">
                         <div class="layout text-center d-flex justify-content-center align-items-center">
                             <p class="text-light">Masterscaff is distinguished by the manufacture and quality of Big
                                 steel panel for
@@ -135,7 +135,7 @@
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <div class="item">
+                    <div class="item wow animate__animated animate__bounceIn animate__slow">
                         <div class="layout text-center d-flex justify-content-center align-items-center">
                             <p class="text-light">Masterscaff is distinguished by the manufacture and quality of Big
                                 steel panel for
@@ -154,7 +154,7 @@
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <div class="item">
+                    <div class="item wow animate__animated animate__bounceIn animate__slow">
                         <div class="layout text-center d-flex justify-content-center align-items-center">
                             <p class="text-light">Masterscaff is distinguished by the manufacture and quality of Big
                                 steel panel for
@@ -172,7 +172,7 @@
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <div class="item">
+                    <div class="item wow animate__animated animate__bounceIn animate__slow">
                         <div class="layout text-center d-flex justify-content-center align-items-center">
                             <p class="text-light">Masterscaff is distinguished by the manufacture and quality of Big
                                 steel panel for
@@ -191,7 +191,7 @@
 
                 <div class="col-12 col-md-6 col-lg-4">
 
-                    <div class="item">
+                    <div class="item wow animate__animated animate__bounceIn animate__slow">
                         <div class="layout text-center d-flex justify-content-center align-items-center">
                             <p class="text-light">Masterscaff is distinguished by the manufacture and quality of Big
                                 steel panel for
@@ -219,7 +219,7 @@
 
 
     <!-- ============ Footer ================ -->
-    <div class="footer">
+    <footer>
         <div class="layout">
             <div class="container">
                 <div class="row g-3 row-footer">
@@ -290,7 +290,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
 
 
@@ -310,18 +310,7 @@
     <script src="JS/main.js"></script>
     <script>
 
-        /* Change Backgroung  */
 
-        function changeColor() {
-            let navbar = document.getElementById("navbar");
-            let scroll = window.scrollY;
-            if (scroll < 150) {
-                navbar.classList.remove("bg-nav");
-
-            } else {
-                navbar.classList.add("bg-nav");
-            }
-        }
 
         window.addEventListener("scroll", changeColor);
 

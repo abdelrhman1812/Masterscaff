@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>About</title>
+    <title>Contact</title>
     <link rel="icon" href="image/logo.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -87,7 +87,8 @@
         <h2 class="specail_h1  wow swing  " data-wow-delay="0.7"> Need Help ? <span class="bg-heaing wow swing  "
                 data-wow-delay="0.7"> Contact Us </span></h2>
         <div class="container py-5">
-            <div class="row gy-3 py-5 d-flex justify-content-center align-items-center shadow rounded-3">
+            <div
+                class="row gy-3 py-5 d-flex justify-content-center align-items-center shadow rounded-3 wow animate__animated animate__bounceIn animate__slow ">
                 <div class="col-md-6">
                     <div class="map">
 
@@ -131,7 +132,8 @@
     </div>
 
     <!-- ============ Footer ================ -->
-    <div class="footer">
+    <footer>
+
         <div class="layout">
             <div class="container">
                 <div class="row g-3 row-footer">
@@ -202,7 +204,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
 
 
 
@@ -222,20 +224,6 @@
     <script src="JS/main.js"></script>
     <script>
 
-        /* Change Backgroung  */
-
-        function changeColor() {
-            let navbar = document.getElementById("navbar");
-            let scroll = window.scrollY;
-            if (scroll < 150) {
-                navbar.classList.remove("bg-nav");
-
-            } else {
-                navbar.classList.add("bg-nav");
-            }
-        }
-
-        window.addEventListener("scroll", changeColor);
 
         new WOW().init();
 

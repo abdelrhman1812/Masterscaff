@@ -56,19 +56,23 @@ body {
   background-color: #f2f2f2;
 }
 
+/* =================================== Home Page ========================================================= */
 /* ===================== Header ===============  */
+header {
+  position: relative;
+}
 header .home {
   height: 100vh;
 }
-header .skitter .container_skitter {
+header .home .skitter .container_skitter {
   overflow: hidden;
   position: relative;
   height: 100% !important;
 }
-header img.image_main {
+header .home .skitter .container_skitter img.image_main {
   height: 100vh !important;
 }
-header .label_skitter {
+header .home .skitter .container_skitter .label_skitter {
   text-align: center;
   z-index: 150;
   position: absolute;
@@ -82,29 +86,29 @@ header .label_skitter {
   flex-direction: column;
   padding: 50px 0;
 }
-header .skitter {
+header .home .skitter {
   position: relative;
   max-width: 100%;
   height: 100% !important;
   background: black;
 }
-header h3 {
+header .home h3 {
   font-size: 57px;
   font-weight: bold;
   font-family: serif;
 }
 @media (max-width: 551px) {
-  header h3 {
+  header .home h3 {
     font-size: 30px;
   }
 }
-header span {
+header .home span {
   color: #fff;
   font-weight: 500;
   margin-bottom: 5px;
   display: block;
 }
-header .btn {
+header .home .btn {
   margin: 5px;
   padding: 5px 30px;
   font-size: 20px;
@@ -132,11 +136,11 @@ nav ul {
     left: 0;
   }
 }
-nav li.nav-item {
+nav ul li.nav-item {
   position: relative;
   text-align: left;
 }
-nav li.nav-item a {
+nav ul li.nav-item a {
   background-color: #1b1c1d;
   padding: 5px;
   margin: 5px;
@@ -147,13 +151,13 @@ nav li.nav-item a {
   position: relative;
 }
 @media (max-width: 991px) {
-  nav li.nav-item a {
+  nav ul li.nav-item a {
     background-color: transparent !important;
     text-align: left;
     padding-left: 30px;
     padding-bottom: 20px;
   }
-  nav li.nav-item a::after {
+  nav ul li.nav-item a::after {
     content: "";
     position: absolute;
     background-color: #BE2623;
@@ -162,7 +166,7 @@ nav li.nav-item a {
     right: 0;
     height: 2px;
   }
-  nav li.nav-item a:hover {
+  nav ul li.nav-item a:hover {
     margin-left: 10px !important;
   }
 }
@@ -173,6 +177,8 @@ nav .navbar-toggler {
 /* ===================== About ===============  */
 .about {
   padding: 50px 0;
+  /* Details-about */
+  /* Info About */
 }
 .about .about-info {
   padding: 20px;
@@ -222,9 +228,7 @@ nav .navbar-toggler {
   border-left: 80px solid;
   border-bottom: 80px solid;
 }
-
-/* Details-about */
-.details {
+.about .details {
   margin: 50px 0;
   background: url("../image/Slider-Photo6-scaled.jpg");
   background-size: cover;
@@ -234,11 +238,11 @@ nav .navbar-toggler {
   position: relative;
 }
 @media (max-width: 767px) {
-  .details {
+  .about .details {
     height: 800px;
   }
 }
-.details .details-layout {
+.about .details .details-layout {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -250,19 +254,19 @@ nav .navbar-toggler {
   padding: 40px;
   flex-wrap: wrap;
 }
-.details .details-layout span {
+.about .details .details-layout span {
   position: relative;
   font-size: 30px;
   font-weight: bold;
 }
-.details .details-layout span::after {
+.about .details .details-layout span::after {
   content: "";
   width: 70%;
   background-color: #000;
   display: block;
   margin: auto;
 }
-.details .icons {
+.about .details .icons {
   background-color: rgba(255, 193, 7, 0.8117647059);
   padding: 10px;
   border-radius: 20px;
@@ -275,11 +279,11 @@ nav .navbar-toggler {
   width: 100px;
   height: 100px;
 }
-.details .icons:hover {
+.about .details .icons:hover {
   background-color: transparent;
   border: 1px solid yellow;
 }
-.details .details-info {
+.about .details .details-info {
   background-color: #f2f2f2;
   color: #000;
   display: flex;
@@ -290,38 +294,36 @@ nav .navbar-toggler {
   border-radius: 10px;
   border-bottom: 5px solid #BE2623;
 }
-.details .details-info i {
+.about .details .details-info i {
   color: #BE2623;
   font-size: 30px;
   margin: 10px;
 }
-
-/* Info About */
-.info {
+.about .info {
   background-color: #f2f2f2;
   padding: 50px 0;
 }
-.info h4 {
+.about .info h4 {
   font-size: 30px;
   font-weight: bold;
   color: #BE2623;
 }
-.info p {
+.about .info p {
   color: #777;
   line-height: 1.8;
   font-size: 18px;
 }
-.info span {
+.about .info span {
   color: #BE2623;
 }
-.info .card {
+.about .info .card {
   width: 250px;
   margin: 0 auto;
   transition: all 0.2s;
   position: relative;
   cursor: pointer;
 }
-.info .card-inner {
+.about .info .card-inner {
   width: inherit;
   height: inherit;
   background: rgba(255, 255, 255, 0.05);
@@ -330,10 +332,10 @@ nav .navbar-toggler {
           backdrop-filter: blur(10px);
   border-radius: 8px;
 }
-.info .card:hover {
+.about .info .card:hover {
   transform: scale(1.04) rotate(1deg);
 }
-.info .circle {
+.about .info .circle {
   width: 100px;
   height: 100px;
   background-color: #BE2623;
@@ -341,11 +343,11 @@ nav .navbar-toggler {
   position: absolute;
   animation: move-up6 2s ease-in infinite alternate-reverse;
 }
-.info .circle:nth-child(1) {
+.about .info .circle:nth-child(1) {
   top: -25px;
   left: -25px;
 }
-.info .circle:nth-child(2) {
+.about .info .circle:nth-child(2) {
   bottom: -25px;
   right: -25px;
   animation-name: move-down1;
@@ -361,17 +363,17 @@ nav .navbar-toggler {
   }
 }
 
-/* ===================== Project ===============  */
-.projects {
+/* ===================== sectio-project ===============  */
+.sectio-project {
   background-color: #fff !important;
   padding: 60px 0;
 }
-.projects p {
+.sectio-project p {
   display: none;
   font-size: 18px;
   font-weight: 900;
 }
-.projects .layout {
+.sectio-project .layout {
   position: absolute;
   background-color: rgba(214, 51, 132, 0.3411764706);
   left: 0;
@@ -385,20 +387,20 @@ nav .navbar-toggler {
   color: #fff;
   transition: all 2s;
 }
-.projects .image:hover .layout {
+.sectio-project .image:hover .layout {
   height: 100%;
 }
-.projects .layout:hover p {
+.sectio-project .layout:hover p {
   display: block;
 }
-.projects .imgHtml {
+.sectio-project .imgHtml {
   width: 70%;
   height: 400px;
   background-image: url(../image/about.jpg);
   background-position: center;
   box-sizing: 100% 100%;
 }
-.projects .imgHtml i {
+.sectio-project .imgHtml i {
   margin: 5px;
   cursor: pointer;
   background-color: #fff;
@@ -410,22 +412,22 @@ nav .navbar-toggler {
   align-items: center;
   border-radius: 50%;
 }
-.projects .infoo {
+.sectio-project .infoo {
   z-index: 999999;
 }
 
-/* ===================== Events ===============  */
-.event {
+/* ===================== sectio-event ===============  */
+.sectio-event {
   padding: 70px 0;
 }
-.event .box-event {
+.sectio-event .box-event {
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-.event .box-event .image {
+.sectio-event .box-event .image {
   overflow: hidden;
 }
-.event .box-event:hover img {
+.sectio-event .box-event:hover img {
   transform: scale(1.3);
   transition: all 1s;
 }
@@ -466,15 +468,15 @@ nav .navbar-toggler {
 }
 
 /* ===================== Footer ===============  */
-.footer {
+footer {
   position: relative;
   background: url("../image//footer.jpg");
   color: #fff;
 }
-.footer .logo {
+footer .logo {
   width: 150px;
 }
-.footer .icon {
+footer .icon {
   width: 50px;
   height: 50px;
   margin: 5px;
@@ -484,66 +486,30 @@ nav .navbar-toggler {
   border-radius: 50%;
   font-size: 30px;
 }
-.footer .icon:hover {
+footer .icon:hover {
   background-color: #BE2623;
 }
-.footer .layout {
+footer .layout {
   background-color: rgba(0, 0, 0, 0.06);
   width: 100%;
   height: 100%;
   padding: 50px 0;
   color: #fff !important;
 }
-.footer span {
+footer span {
   color: #BE2623;
   font-size: 30px;
   font-weight: bold;
 }
-.footer a {
+footer a {
   color: #fff !important;
   font-weight: 900;
 }
-.footer .row-footer {
+footer .row-footer {
   border-bottom: 1px solid rgba(190, 38, 35, 0.2784313725);
 }
 
-/* ===================== scrollbar ===============  */
-::-webkit-scrollbar {
-  width: 12px;
-  background-color: #fff;
-  border-left: 2px solid #eee;
-  box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.2) inset;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #eee;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #BE2623;
-  box-shadow: 0px 0px 10px 0px rgba(238, 238, 238, 0.5490196078) inset;
-  border-radius: 100vh;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  background-color: #fff;
-  border-left: 2px solid #eee;
-  box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.2) inset;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #eee;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #BE2623;
-  box-shadow: 0px 0px 10px 0px rgba(238, 238, 238, 0.5490196078) inset;
-  border-radius: 100vh;
-}
-
-/* ===================== ===============  */
-/* ============  Test ============= */
+/* =================================== About Page ========================================================= */
 /* About Us */
 .about-us {
   background: url("../image/aboutpage.jpg");
@@ -581,6 +547,7 @@ nav .navbar-toggler {
   font-size: 30px;
 }
 
+/* =================== section certificates =============== */
 .masterscaf {
   position: relative;
 }
@@ -602,6 +569,7 @@ nav .navbar-toggler {
   left: -2px;
 }
 
+/* =================== section certificates =============== */
 .services {
   background-color: #fff;
   padding: 50px 0;
@@ -883,6 +851,7 @@ nav .navbar-toggler {
   background-color: #BE2623;
   transition: 0.3s ease-out;
   text-decoration: none;
+  padding: 10px 5px;
   border-radius: 16px;
   position: absolute;
   text-align: center;
@@ -911,9 +880,9 @@ nav .navbar-toggler {
   color: #BE2623;
 }
 
-/* ========== event page */
+/* ========== event page =========== */
 .events {
-  background: url("../image/projectpage.jpg");
+  background: url("../image/Eventsjpg");
   height: 60vh;
   width: 100%;
   background-color: #000;
@@ -948,6 +917,7 @@ nav .navbar-toggler {
   font-size: 30px;
 }
 
+/* =====================imege slider project */
 .bg-sec {
   background-color: #212529;
 }
@@ -973,7 +943,8 @@ nav .navbar-toggler {
   bottom: -50px;
   background-color: #BE2623;
   border: none;
-  color: #fff;
+  background-color: #fff !important;
+  color: #000;
 }
 .main-image .btns .negative {
   left: 20%;
@@ -989,7 +960,7 @@ nav .navbar-toggler {
   transform: scale(1.1);
 }
 
-/* Contacts */
+/* ======================== Contacts page ============= */
 .contact-us {
   background: url("../image/contact.jpg");
   height: 60vh;
@@ -1045,4 +1016,39 @@ nav .navbar-toggler {
 }
 .sec-contact .form-input textarea:hover {
   border-color: #BE2623;
+}
+
+/* ===================== scrollbar ===============  */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #fff;
+  border-left: 2px solid #eee;
+  box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #BE2623;
+  box-shadow: 0px 0px 10px 0px rgba(238, 238, 238, 0.5490196078) inset;
+  border-radius: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #fff;
+  border-left: 2px solid #eee;
+  box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #BE2623;
+  box-shadow: 0px 0px 10px 0px rgba(238, 238, 238, 0.5490196078) inset;
+  border-radius: 100vh;
 }/*# sourceMappingURL=index.css.map */
