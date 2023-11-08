@@ -1,4 +1,7 @@
 
+
+
+
 /* increment Number in section in home page */
 let nums=document.querySelectorAll(".num")
 console.log(nums)
@@ -130,13 +133,72 @@ iClose.addEventListener("click", function () {
 
 
 
+/* ================================= videos ================================== */
+let madiaLayout=document.getElementById("madiaLayout")
+let media=document.getElementById("media")
+console.log(media)
+
+let allVideo=["media/home.webm","media/about.webm","media/system.webm","media/projects.webm","media/download.webm","media/events.webm", ]
+
+let modifiedVideo = allVideo.map(video => {
+  return video.replace("media/", "").replace(".webm", "");
+});
+
+console.log(modifiedVideo);
+
+function displayVideo(){
+  let emptyy=""
+  for(let i = 0 ;i<allVideo.length ;i++){
+    emptyy +=
+    `
+    <div class="col-md-6  col-lg-4 wow animate__animated animate__zoomIn animate__slow  ">
+    <div class="video">
+        <video autoplay muted loop controls class="videos">
+            <source src="${allVideo[i]}" type="video/mp4">
+        </video>
+        <button class="btn btn-dark w-100" onclick="displaymadiaLayout(${i})">${modifiedVideo[i]}</button>
+
+    </div>
+</div>
+    
+    `
+    
+  }
+  media.innerHTML=emptyy
+}
+
+
+
+displayVideo()
+
+
+function displaymadiaLayout(idx){
+  madiaLayout.classList.remove("d-none")
+  madiaLayout.innerHTML =  `
+  <div class="col-md-6  col-lg-4   ">
+  <div class="video position-relative">
+  <i class=" fa-solid fa-xmark position-absolute top-0 end-0 z-idx  cursor  p-2" onclick="dNonemadiaLayout()"></i>
+
+      <video autoplay muted loop controls class="videos">
+          <source src="${allVideo[idx]}" type="video/mp4">
+      </video>
+
+  </div>
+</div>
+`
+  
+}
+
+function dNonemadiaLayout(){
+  madiaLayout.classList.add("d-none")
+  console.log("close")
+
+}
 
 
 
 
-
-
-/* Change Backgroung  */
+/* ====================== Change Backgroung =====================  */
 
 function changeColor() {
   let navbar = document.getElementById("navbar");
@@ -156,101 +218,5 @@ window.addEventListener("scroll", changeColor);
 
 
 
-/* ========================= */
-
-
 /* ================ Slider ===============  */
 
-
-$(document).ready(function() {
-  
-  $(".skitter-large").skitter(
-    {
-      itemes:1
-    }
-  );
-});
-
-
-$(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    itemes:3,
-    autoplay:true,
-    autoplayTimeout:1000,
-    margin:10,
-    loop:true
-  });
-});
-
-
-
-
-
-
-/* ===========  text =============== */
-
-
-
-// let allProject = ["image/1.jpg", "image/2.jpg", "image/3.jpg"];
-// /* et allProject = [{id:1, name:"image/1.jpg" ,title:"one"}, {id:2, name:"image/2.jpg" ,title:"Two"}];
-// let project = document.getElementById('project');
-// console.log(allProject);
-
-// function displayProject(allProject) {
-//   let empty = '';
-//   for (let i = 0; i < allProject.length; i++) {
-//     empty += `
-//     <div class="col-6">
-//         <img src="${allProject[i].name}" class="w-100" alt="">
-//         <button class="btn btn-danger w-100" onclick="getById('${allProject[i]}')">Details</button>
-//     </div>
-//     `;
-//   }
-//   project.innerHTML = empty;
-// }
-
-// displayProject(allProject);
-
-// function getById(img) {
-//   let id = [img]; // Create a new array with the current image
-//   console.log(img);
-//   localStorage.removeItem("id"); // Remove the old value from local storage
-//   localStorage.setItem('id', JSON.stringify(id)); // Set the new value
-//   window.location.href = "projectid.html";
-// }
-
-// let id = JSON.parse(localStorage.getItem('id')) || [];
-// console.log(id);
-// console.log(id); */
-
-// let project = document.getElementById('project');
-// console.log(project);
-
-// let allProject = [{id: 1, name: "image/1.jpg", title: "one"}, {id: 2, name: "image/2.jpg", title: "Two"}];
-// console.log(allProject);
-
-// function displayProject(allProject) {
-//   let empty = '';
-//   for (let i = 0; i < allProject.length; i++) {
-//     empty += `
-//     <div class="col-6">
-//         <img src="${allProject[i].name}" class="w-100" alt="">
-//         <button class="btn btn-danger w-100" onclick="getById(${allProject[i]})">Details</button>
-//     </div>
-//     `;
-//   }
-//   project.innerHTML = empty;
-// }
-
-// displayProject(allProject);
-
-// function getById(obj) {
-//   let data = obj;
-//   console.log(data);
-//   localStorage.removeItem("data");
-//   localStorage.setItem('data', JSON.stringify(data));
-//   window.location.href = "projectid.html";
-// }
-
-// let data = JSON.parse(localStorage.getItem('data')) || [];
-// console.log(data);

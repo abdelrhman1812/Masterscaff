@@ -9,6 +9,42 @@ $text-main: #777;
 $font-four: 30px;
 $font-p: 18px;
 
+
+.layout-page {
+    position: absolute;
+    background-color: rgb(0 0 0 / 71%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+
+    .text {
+
+        max-width: 600px;
+        background-color: #f2f2f25c;
+        color: #fff;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+
+        p {
+            font-size: $font-p;
+            line-height: 1.8;
+            font-weight: 600;
+            padding-left: 50px;
+        }
+
+        h2 {
+            padding-left: 50px;
+            font-size: $font-four;
+        }
+
+    }
+
+
+}
+
 .bg-nav {
     background-color: #fff !important;
 }
@@ -17,7 +53,13 @@ $font-p: 18px;
     background-color: $main-color !important;
 }
 
+.z-idx {
+    z-index: 9999999999;
+}
 
+.cursor {
+    cursor: pointer;
+}
 
 %icon-sec {
 
@@ -695,41 +737,10 @@ footer {
     background-size: cover;
     background-position: center center;
 
-
     .layout {
-        position: absolute;
-        background-color: rgb(0 0 0 / 71%);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-
-
-        .text {
-
-            max-width: 600px;
-            background-color: #f2f2f25c;
-            color: #fff;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-
-            p {
-                font-size: $font-p;
-                line-height: 1.8;
-                font-weight: 600;
-                padding-left: 50px;
-            }
-
-            h2 {
-                padding-left: 50px;
-                font-size: $font-four;
-            }
-
-        }
-
-
+        @extend .layout-page;
     }
+
 
 
 }
@@ -975,36 +986,7 @@ footer {
     background-position: center center;
 
     .layout {
-        position: absolute;
-        background-color: rgb(0 0 0 / 71%);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-
-        .text {
-
-            max-width: 600px;
-            background-color: #f2f2f25c;
-            color: #fff;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-
-            p {
-                font-size: $font-p;
-                line-height: 1.8;
-                font-weight: 600;
-                padding-left: 50px;
-            }
-
-            h2 {
-                padding-left: 50px;
-                font-size: $font-four;
-            }
-
-        }
-
+        @extend .layout-page;
     }
 }
 
@@ -1083,36 +1065,7 @@ footer {
     background-position: center center;
 
     .layout {
-        position: absolute;
-        background-color: rgb(0 0 0 / 71%);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-
-        .text {
-
-            max-width: 600px;
-            background-color: #f2f2f25c;
-            color: #fff;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-
-            p {
-                font-size: $font-p;
-                line-height: 1.8;
-                font-weight: 600;
-                padding-left: 50px;
-            }
-
-            h2 {
-                padding-left: 50px;
-                font-size: $font-four;
-            }
-
-        }
-
+        @extend .layout-page;
     }
 
 }
@@ -1190,36 +1143,7 @@ footer {
     background-position: center center;
 
     .layout {
-        position: absolute;
-        background-color: rgb(0 0 0 / 71%);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-
-        .text {
-
-            max-width: 600px;
-            background-color: #f2f2f25c;
-            color: #fff;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-
-            p {
-                font-size: $font-p;
-                line-height: 1.8;
-                font-weight: 600;
-                padding-left: 50px;
-            }
-
-            h2 {
-                padding-left: 50px;
-                font-size: $font-four;
-            }
-
-        }
-
+        @extend .layout-page;
     }
 }
 
@@ -1229,7 +1153,8 @@ footer {
 
 
 .bg-sec {
-    background-color: #212529;
+    background-color: #fff;
+    padding: 10px;
 }
 
 .slider-img {
@@ -1306,13 +1231,7 @@ footer {
 
 
     .layout {
-        position: absolute;
-        background-color: rgb(0 0 0 / 71%);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
+        @extend .layout-page
     }
 }
 
@@ -1365,6 +1284,91 @@ footer {
     }
 }
 
+/* ================= Downloads page ============== */
+.sec-download {
+    background: url("../image/downloads.jpg");
+    height: 60vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+    .layout {
+        @extend .layout-page
+    }
+}
+
+.download {
+
+    img {
+        transition: all 0.5s ease-in;
+
+        &:hover {
+            transform: scale(1.1) !important;
+        }
+    }
+
+    span {
+        transition: all 0.5s ease-in;
+        cursor: pointer;
+
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+
+
+
+/* ================= media page ============== */
+.media {
+    background: url("../image/media.jpg");
+    height: 60vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+    .layout {
+        @extend .layout-page
+    }
+}
+
+.sectino-media {
+
+    img {
+        transition: all 0.5s ease-in;
+
+        &:hover {
+            transform: scale(1.1) !important;
+        }
+    }
+
+    span {
+        transition: all 0.5s ease-in;
+        cursor: pointer;
+
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+
+.video video {
+    width: 100%;
+}
+
+#madiaLayout {
+    z-index: 999999;
+    background-color: #00000091;
+}
+
 
 /* ===================== scrollbar ===============  */
 ::-webkit-scrollbar {
@@ -1400,3 +1404,8 @@ footer {
     box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
     border-radius: 100vh;
 }
+
+
+
+
+/* ========= m */
