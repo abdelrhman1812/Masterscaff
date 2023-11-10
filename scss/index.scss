@@ -10,6 +10,14 @@ $text-main: #777;
 $font-four: 30px;
 $font-p: 18px;
 
+.bg-btn-media {
+    background-color: #001e57 !important;
+    color: #fff;
+
+    &:hover {
+        color: #fff;
+    }
+}
 
 .layout-page {
     position: absolute;
@@ -146,6 +154,83 @@ body {
     cursor: pointer;
 }
 
+
+/* ===================== Navbar ===============  */
+
+nav {
+    z-index: 9999999 !important;
+
+    .logo {
+        width: 150px;
+    }
+
+    ul {
+        color: #fff !important;
+
+        @include responsive(991px) {
+            background-color: #000000ed;
+            padding: 20px;
+            position: absolute;
+            top: 68px;
+            width: 100%;
+            height: 100vh;
+            left: 0;
+            transition: all 1s;
+
+
+        }
+
+        li.nav-item {
+            position: relative;
+            text-align: left;
+
+            a {
+                background-color: #1b1c1d;
+                padding: 5px;
+                margin: 5px;
+                color: #fff !important;
+                display: block;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+                position: relative;
+
+                @include responsive(991px) {
+                    background-color: transparent !important;
+                    // border-bottom: 1px solid #fff;
+                    text-align: left;
+                    padding-left: 30px;
+                    padding-bottom: 20px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        background-color: #F7F7F7;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 2px;
+                    }
+
+
+                    &:hover {
+                        margin-left: 10px !important;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+
+    .navbar-toggler {
+
+        color: #be2623;
+    }
+
+}
+
+
 /* =================================== Home Page ========================================================= */
 
 /* ===================== Header ===============  */
@@ -155,12 +240,14 @@ header {
         position: relative;
 
         img {
-            height: 100vh !important;
+
 
             @include responsive(767px) {
                 height: 60vh !important;
             }
         }
+
+
 
         .carousel-control-prev-icon {
             background-image: url();
@@ -194,27 +281,54 @@ header {
                 color: $text-main;
             }
 
-            .btn {
-                width: 150px !important;
-                margin: 0 5px;
-                padding: 10px !important;
-                color: #fff;
-                font-size: 20px;
-                font-weight: bold;
+            .more,
+            .our-solutions {
+                width: 150px;
+                padding: 7px 5px;
+                border: none;
+                font-size: 18px;
+                transition: all 1s;
 
-                @include responsive(767px) {
-                    width: 100px !important;
-                    padding: 5px !important;
+                @include responsive(551px) {
+                    width: 100px;
+                    font-size: 14px;
                 }
+
             }
 
-            @include responsive(991px) {
-                bottom: 1.25rem;
+            .more {
+                background-color: #212529;
+                color: #fff;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
+                }
+
+            }
+
+            .our-solutions {
+                background-color: #fff;
+                color: $main-color !important;
+
+                &:hover {
+                    background-color: $main-color;
+                    color: #fff !important;
+                }
+
+            }
+
+            bottom: 40%;
+
+            @include responsive(1024px) {
+                bottom: 2%;
+
             }
 
             h5 {
                 font-size: 60px;
-                font-weight: 900;
+                font-weight: 700;
+                font-family: 'Times New Roman', Times, serif;
 
                 @include responsive(767px) {
                     font-size: 30px;
@@ -224,7 +338,10 @@ header {
 
             p {
                 font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+                color: #fff;
             }
+
 
 
 
@@ -235,79 +352,6 @@ header {
 }
 
 
-/* ===================== Navbar ===============  */
-
-nav {
-    z-index: 9999999 !important;
-
-    .logo {
-        width: 150px;
-    }
-
-    ul {
-        color: #fff !important;
-
-        @include responsive(991px) {
-            background-color: #000000ed;
-            padding: 20px;
-            position: absolute;
-            top: 68px;
-            width: 100%;
-            height: 100vh;
-            left: 0;
-
-
-        }
-
-        li.nav-item {
-            position: relative;
-            text-align: left;
-
-            a {
-                background-color: #1b1c1d;
-                padding: 5px;
-                margin: 5px;
-                color: #fff !important;
-                display: block;
-                border-radius: 10px;
-                transition: all 0.5s ease;
-                position: relative;
-
-                @include responsive(991px) {
-                    background-color: transparent !important;
-                    // border-bottom: 1px solid #fff;
-                    text-align: left;
-                    padding-left: 30px;
-                    padding-bottom: 20px;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        background-color: #BE2623;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        height: 2px;
-                    }
-
-
-                    &:hover {
-                        margin-left: 10px !important;
-                    }
-
-                }
-            }
-        }
-
-    }
-
-
-    .navbar-toggler {
-
-        color: #be2623;
-    }
-
-}
 
 
 
@@ -325,12 +369,13 @@ nav {
         padding: 0 20px;
         margin: 0 auto;
 
-
     }
 
 
-
     .about-work {
+        span {
+            color: #777;
+        }
 
         img {
             width: 100% !important;
@@ -405,7 +450,7 @@ nav {
             }
 
             p {
-                color: #777;
+                // color: #777;
             }
 
             position: relative;
@@ -419,7 +464,7 @@ nav {
                 right: 0;
                 top: 0;
                 height: 100%;
-                background-color: $main-color;
+                background-color: #e117398a;
                 transition: all 2s;
                 opacity: 0;
 
@@ -430,7 +475,7 @@ nav {
                 content: "";
                 position: absolute;
                 height: 5px;
-                background-color: red;
+                background-color: $main-color;
                 bottom: 0;
                 right: 0;
                 left: 0;
@@ -457,8 +502,8 @@ nav {
 
             &:hover .text,
             &:hover .icon {
-                z-index: 9999;
-                color: aliceblue;
+                z-index: 999999;
+                color: #fff !important;
             }
 
             &:hover::before {
@@ -485,7 +530,7 @@ nav {
         .image-details {
             // background-color: #001e57;
             height: 500px;
-            background: url('../image/about/about-details.jpg');
+            background: url('../image/about/details.jpg');
             background-size: cover;
         }
     }
@@ -925,7 +970,7 @@ footer {
     position: relative;
     background-size: cover;
     background-position: center center;
-    background-image: url('../image/about_us/main1.jpg');
+    background-image: url('../image/about_us/pexels-zukiman-mohamad-190417.jpg');
 
 
     .layout {
@@ -1271,7 +1316,7 @@ footer {
 /* ===================== sytem page =============== */
 
 .sytem {
-    background: url("../image/systems.jpg");
+    background: url("../image/system/main.jpg");
     height: 60vh;
     width: 100%;
     background-color: #000;
@@ -1436,7 +1481,7 @@ footer {
 
 /* ========== Project Page =============== */
 .project {
-    background: url("../image/projectpage.jpg");
+    background: url("../image/projectss/main.jpg");
     height: 60vh;
     width: 100%;
     background-color: #000;
@@ -1571,7 +1616,7 @@ footer {
     }
 }
 
-/* ========== polivardo Page =============== */
+/* =========project-id =============== */
 
 
 
@@ -1623,23 +1668,6 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .polivardo {
 
     h1 {
@@ -1650,7 +1678,7 @@ footer {
 /* ========== event page =========== */
 
 .events {
-    background: url("../image/Eventsjpg");
+    background: url("../image/events/main.jpg");
     height: 60vh;
     width: 100%;
     background-color: #000;
@@ -1663,15 +1691,9 @@ footer {
     }
 }
 
-/* =====================imege slider project */
 
 
 
-
-.bg-sec {
-    background-color: #fff;
-    padding: 10px;
-}
 
 
 
@@ -1679,7 +1701,7 @@ footer {
 
 
 .contact-us {
-    background: url("../image/contact.jpg");
+    background: url("../image/contact/main.jpg");
     height: 60vh;
     width: 100%;
     background-color: #000;
@@ -1744,7 +1766,7 @@ footer {
 
 /* ================= Downloads page ============== */
 .sec-download {
-    background: url("../image/downloads.jpg");
+    background: url("../image/dwounload/main.jpg");
     height: 60vh;
     width: 100%;
     background-color: #000;

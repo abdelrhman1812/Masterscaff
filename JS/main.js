@@ -151,13 +151,22 @@ function displayVideo(){
   for(let i = 0 ;i<allVideo.length ;i++){
     emptyy +=
     `
-    <div class="col-md-6  col-lg-4 wow animate__animated animate__zoomIn animate__slow  ">
-    <div class="video">
-        <video autoplay muted loop controls class="videos">
-            <source src="${allVideo[i]}" type="video/mp4">
-        </video>
-        <button class="btn btn-dark w-100" onclick="displaymadiaLayout(${i})">${modifiedVideo[i]}</button>
+    <div class="col-md-6 col-lg-4  ">
+    <div class="event-item">
+        <div class="video shadow">
+            <video autoplay muted loop controls class="videos">
+                <source src="${allVideo[i]}" type="video/mp4">
+            </video>
+    
+        </div>
+        <div class="event-text ">
+            <div class="bg-white  shadow py-5 content">
 
+                <h6>Polivardo Buliding </h6>
+                <p>June 10, 2019 </p>
+                <button class="btn bg-btn-media w-100" onclick="displaymadiaLayout(${i})">show ${modifiedVideo[i]}</button>
+            </div>
+        </div>
     </div>
 </div>
     
