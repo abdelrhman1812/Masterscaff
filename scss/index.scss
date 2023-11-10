@@ -359,10 +359,6 @@ header {
 /* ===================== About ===============  */
 
 
-
-
-
-
 .about {
     .container {
         max-width: 1210px;
@@ -905,59 +901,7 @@ header {
 }
 
 
-/* ===================== Footer ===============  */
 
-
-footer {
-    position: relative;
-    background: url("../image//footer.jpg");
-    color: #fff;
-
-    .logo {
-        width: 150px;
-    }
-
-    .icon {
-        width: 50px;
-        height: 50px;
-        margin: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        font-size: 30px;
-
-        &:hover {
-            background-color: $main-color;
-        }
-    }
-
-    .layout {
-        background-color: rgb(0 0 0 / 6%);
-        width: 100%;
-        height: 100%;
-        padding: 50px 0;
-        color: #fff !important;
-
-    }
-
-    span {
-        color: $main-color;
-        font-size: 30px;
-        font-weight: bold;
-    }
-
-    a {
-        color: #fff !important;
-        // font-size: 30px;
-        font-weight: 900;
-    }
-
-    .row-footer {
-        border-bottom: 1px solid #be262347;
-
-    }
-}
 
 
 
@@ -1697,73 +1641,6 @@ footer {
 
 
 
-/* ======================== Contacts page ============= */
-
-
-.contact-us {
-    background: url("../image/contact/main.jpg");
-    height: 60vh;
-    width: 100%;
-    background-color: #000;
-    position: relative;
-    background-size: cover;
-    background-position: center center;
-
-
-    .layout {
-        @extend .layout-page
-    }
-}
-
-.sec-contact {
-
-    .map {
-        padding: 15px;
-        border-radius: 20px;
-
-        iframe {
-            width: 100%;
-            border-radius: 5px;
-        }
-    }
-
-    .form-input {
-        border: 1px solid #be262324;
-        padding: 15px;
-        border-radius: 20px;
-
-        input {
-            margin: 10px 0;
-            width: 48%;
-            outline: none !important;
-            transition: all 0.5s;
-            box-shadow: none;
-            border-radius: 15px;
-
-            &:focus {
-                border-color: $main-color;
-            }
-
-            @include responsive(761px) {
-                width: 100%;
-            }
-
-        }
-
-        textarea {
-            outline: none !important;
-            transition: all 0.5s;
-            box-shadow: none;
-
-
-
-            &:hover {
-                border-color: $main-color;
-            }
-        }
-    }
-}
-
 /* ================= Downloads page ============== */
 .sec-download {
     background: url("../image/dwounload/main.jpg");
@@ -1775,30 +1652,10 @@ footer {
     background-position: center center;
 
     .layout {
-        @extend .layout-page
+        @extend .layout-page;
     }
 }
 
-.download {
-
-    img {
-        transition: all 0.5s ease-in;
-
-        &:hover {
-            transform: scale(1.1) !important;
-        }
-    }
-
-    span {
-        transition: all 0.5s ease-in;
-        cursor: pointer;
-
-
-        &:hover {
-            color: $main-color;
-        }
-    }
-}
 
 
 
@@ -1850,6 +1707,202 @@ footer {
 }
 
 
+
+
+/* ======================== Contacts page ============= */
+
+.contact-us {
+    background: url("../image/contact/main.jpg");
+    height: 60vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+
+    .layout {
+        @extend .layout-page;
+    }
+}
+
+.contacts {
+
+    .container {
+        max-width: 1210px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+    }
+
+    .contact-details {
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: cursive;
+        }
+
+        background-color: #272727;
+        color: #fff;
+        padding: 50px 20px;
+
+        span {
+            font-size: 14px;
+        }
+
+        i {
+            font-size: 25px;
+        }
+
+        .social {
+            margin-top: 20px;
+
+            i {
+                margin-left: 18px;
+                border: 1px solid #f2f2f2;
+                padding: 7px;
+
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .send-message {
+        h2 {
+            color: $main-color;
+            margin: 0 0 20px 0;
+            font-size: 30px;
+            font-weight: 800;
+            padding: 10px 0;
+            position: relative;
+
+            &::after {
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 100px;
+                height: 1px;
+                background-color: $main-color;
+                position: absolute;
+            }
+
+        }
+
+        input {
+            padding: 15px;
+            background-color: #00000014;
+            border: none;
+            width: 48%;
+
+
+            @include responsive(667px) {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            &:focus {
+                border: 1px solid $main-color;
+                outline: none;
+            }
+        }
+
+        textarea {
+            background-color: #00000014;
+            margin-top: 10px;
+            width: 97%;
+            border: none;
+
+            &:focus {
+                border: 1px solid $main-color;
+                outline: none;
+            }
+        }
+
+        .btn {
+            background-color: $main-color;
+            color: #fff;
+            padding: 10px 20px;
+            width: 150px;
+            margin-top: 15px;
+            border-radius: 0;
+        }
+    }
+
+
+    .map {
+        padding: 15px;
+        border-radius: 20px;
+
+        iframe {
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+}
+
+
+
+
+
+
+/* ===================== Footer ===============  */
+
+
+footer {
+    position: relative;
+    background: url("../image//footer.jpg");
+    color: #fff;
+
+    .logo {
+        width: 150px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 30px;
+
+        &:hover {
+            background-color: $main-color;
+        }
+    }
+
+    .layout {
+        background-color: rgb(0 0 0 / 6%);
+        width: 100%;
+        height: 100%;
+        padding: 50px 0;
+        color: #fff !important;
+
+    }
+
+    span {
+        color: $main-color;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    a {
+        color: #fff !important;
+        // font-size: 30px;
+        font-weight: 700;
+    }
+
+    .row-footer {
+        border-bottom: 1px solid #be262347;
+
+    }
+}
+
+
+
 /* ===================== scrollbar ===============  */
 ::-webkit-scrollbar {
     width: 12px;
@@ -1884,8 +1937,3 @@ footer {
     box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
     border-radius: 100vh;
 }
-
-
-
-
-/* ========= m */

@@ -7,7 +7,7 @@
   color: #fff;
 }
 
-.layout-page, .media .layout, .sec-download .layout, .contact-us .layout, .events .layout, .project .layout, .sytem .layout, .about-us .layout {
+.layout-page, .contact-us .layout, .media .layout, .sec-download .layout, .events .layout, .project .layout, .sytem .layout, .about-us .layout {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.71);
   width: 100%;
@@ -16,20 +16,20 @@
   justify-content: start;
   align-items: center;
 }
-.layout-page .text, .media .layout .text, .sec-download .layout .text, .contact-us .layout .text, .events .layout .text, .project .layout .text, .sytem .layout .text, .about-us .layout .text {
+.layout-page .text, .contact-us .layout .text, .media .layout .text, .sec-download .layout .text, .events .layout .text, .project .layout .text, .sytem .layout .text, .about-us .layout .text {
   max-width: 600px;
   background-color: rgba(242, 242, 242, 0.3607843137);
   color: #fff;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-.layout-page .text p, .media .layout .text p, .sec-download .layout .text p, .contact-us .layout .text p, .events .layout .text p, .project .layout .text p, .sytem .layout .text p, .about-us .layout .text p {
+.layout-page .text p, .contact-us .layout .text p, .media .layout .text p, .sec-download .layout .text p, .events .layout .text p, .project .layout .text p, .sytem .layout .text p, .about-us .layout .text p {
   font-size: 18px;
   line-height: 1.8;
   font-weight: 600;
   padding-left: 50px;
 }
-.layout-page .text h2, .media .layout .text h2, .sec-download .layout .text h2, .contact-us .layout .text h2, .events .layout .text h2, .project .layout .text h2, .sytem .layout .text h2, .about-us .layout .text h2 {
+.layout-page .text h2, .contact-us .layout .text h2, .media .layout .text h2, .sec-download .layout .text h2, .events .layout .text h2, .project .layout .text h2, .sytem .layout .text h2, .about-us .layout .text h2 {
   padding-left: 50px;
   font-size: 30px;
 }
@@ -657,48 +657,6 @@ header .home .carousel-caption p {
   font-size: #777;
 }
 
-/* ===================== Footer ===============  */
-footer {
-  position: relative;
-  background: url("../image//footer.jpg");
-  color: #fff;
-}
-footer .logo {
-  width: 150px;
-}
-footer .icon {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-size: 30px;
-}
-footer .icon:hover {
-  background-color: #e11739;
-}
-footer .layout {
-  background-color: rgba(0, 0, 0, 0.06);
-  width: 100%;
-  height: 100%;
-  padding: 50px 0;
-  color: #fff !important;
-}
-footer span {
-  color: #e11739;
-  font-size: 30px;
-  font-weight: bold;
-}
-footer a {
-  color: #fff !important;
-  font-weight: 900;
-}
-footer .row-footer {
-  border-bottom: 1px solid rgba(190, 38, 35, 0.2784313725);
-}
-
 /* =========== page about-us ================= */
 .about-us {
   height: 60vh;
@@ -1230,54 +1188,6 @@ footer .row-footer {
   background-size: cover;
   background-position: center center;
 }
-/* ======================== Contacts page ============= */
-.contact-us {
-  background: url("../image/contact/main.jpg");
-  height: 60vh;
-  width: 100%;
-  background-color: #000;
-  position: relative;
-  background-size: cover;
-  background-position: center center;
-}
-.sec-contact .map {
-  padding: 15px;
-  border-radius: 20px;
-}
-.sec-contact .map iframe {
-  width: 100%;
-  border-radius: 5px;
-}
-.sec-contact .form-input {
-  border: 1px solid rgba(190, 38, 35, 0.1411764706);
-  padding: 15px;
-  border-radius: 20px;
-}
-.sec-contact .form-input input {
-  margin: 10px 0;
-  width: 48%;
-  outline: none !important;
-  transition: all 0.5s;
-  box-shadow: none;
-  border-radius: 15px;
-}
-.sec-contact .form-input input:focus {
-  border-color: #e11739;
-}
-@media (max-width: 761px) {
-  .sec-contact .form-input input {
-    width: 100%;
-  }
-}
-.sec-contact .form-input textarea {
-  outline: none !important;
-  transition: all 0.5s;
-  box-shadow: none;
-}
-.sec-contact .form-input textarea:hover {
-  border-color: #e11739;
-}
-
 /* ================= Downloads page ============== */
 .sec-download {
   background: url("../image/dwounload/main.jpg");
@@ -1288,20 +1198,6 @@ footer .row-footer {
   background-size: cover;
   background-position: center center;
 }
-.download img {
-  transition: all 0.5s ease-in;
-}
-.download img:hover {
-  transform: scale(1.1) !important;
-}
-.download span {
-  transition: all 0.5s ease-in;
-  cursor: pointer;
-}
-.download span:hover {
-  color: #e11739;
-}
-
 /* ================= media page ============== */
 .media {
   background: url("../image/media.jpg");
@@ -1333,6 +1229,151 @@ footer .row-footer {
 #madiaLayout {
   z-index: 999999;
   background-color: rgba(0, 0, 0, 0.568627451);
+}
+
+/* ======================== Contacts page ============= */
+.contact-us {
+  background: url("../image/contact/main.jpg");
+  height: 60vh;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+.contacts .container {
+  max-width: 1210px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.contacts .contact-details {
+  background-color: #272727;
+  color: #fff;
+  padding: 50px 20px;
+}
+.contacts .contact-details h2 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: cursive;
+}
+.contacts .contact-details span {
+  font-size: 14px;
+}
+.contacts .contact-details i {
+  font-size: 25px;
+}
+.contacts .contact-details .social {
+  margin-top: 20px;
+}
+.contacts .contact-details .social i {
+  margin-left: 18px;
+  border: 1px solid #f2f2f2;
+  padding: 7px;
+}
+.contacts .contact-details .social i:hover {
+  background-color: #fff;
+  color: #000;
+}
+.contacts .send-message h2 {
+  color: #e11739;
+  margin: 0 0 20px 0;
+  font-size: 30px;
+  font-weight: 800;
+  padding: 10px 0;
+  position: relative;
+}
+.contacts .send-message h2::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 1px;
+  background-color: #e11739;
+  position: absolute;
+}
+.contacts .send-message input {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.0784313725);
+  border: none;
+  width: 48%;
+}
+@media (max-width: 667px) {
+  .contacts .send-message input {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+.contacts .send-message input:focus {
+  border: 1px solid #e11739;
+  outline: none;
+}
+.contacts .send-message textarea {
+  background-color: rgba(0, 0, 0, 0.0784313725);
+  margin-top: 10px;
+  width: 97%;
+  border: none;
+}
+.contacts .send-message textarea:focus {
+  border: 1px solid #e11739;
+  outline: none;
+}
+.contacts .send-message .btn {
+  background-color: #e11739;
+  color: #fff;
+  padding: 10px 20px;
+  width: 150px;
+  margin-top: 15px;
+  border-radius: 0;
+}
+.contacts .map {
+  padding: 15px;
+  border-radius: 20px;
+}
+.contacts .map iframe {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* ===================== Footer ===============  */
+footer {
+  position: relative;
+  background: url("../image//footer.jpg");
+  color: #fff;
+}
+footer .logo {
+  width: 150px;
+}
+footer .icon {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 30px;
+}
+footer .icon:hover {
+  background-color: #e11739;
+}
+footer .layout {
+  background-color: rgba(0, 0, 0, 0.06);
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  color: #fff !important;
+}
+footer span {
+  color: #e11739;
+  font-size: 20px;
+  font-weight: bold;
+}
+footer a {
+  color: #fff !important;
+  font-weight: 700;
+}
+footer .row-footer {
+  border-bottom: 1px solid rgba(190, 38, 35, 0.2784313725);
 }
 
 /* ===================== scrollbar ===============  */
@@ -1368,6 +1409,4 @@ footer .row-footer {
   background-color: #e11739;
   box-shadow: 0px 0px 10px 0px rgba(238, 238, 238, 0.5490196078) inset;
   border-radius: 100vh;
-}
-
-/* ========= m *//*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

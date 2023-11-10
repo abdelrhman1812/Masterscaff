@@ -151,7 +151,7 @@ function displayVideo(){
   for(let i = 0 ;i<allVideo.length ;i++){
     emptyy +=
     `
-    <div class="col-md-6 col-lg-4  ">
+    <div class="col-md-6 col-lg-4  wow animate__animated animate__zoomIn animate__slow ">
     <div class="event-item">
         <div class="video shadow">
             <video autoplay muted loop controls class="videos">
