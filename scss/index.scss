@@ -1573,6 +1573,73 @@ footer {
 
 /* ========== polivardo Page =============== */
 
+
+
+
+.project-id {
+    .imagee {
+        padding-bottom: 20px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $main-color;
+        }
+
+        &::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            bottom: -13px;
+            z-index: 1;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $second-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            transition: all 1s;
+
+            &:hover {
+
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .polivardo {
 
     h1 {
@@ -1604,64 +1671,6 @@ footer {
 .bg-sec {
     background-color: #fff;
     padding: 10px;
-}
-
-.slider-img {
-
-    width: 30%;
-
-    .child {
-        transition: all 1s;
-
-        &:hover {
-            transform: scale(1.1);
-
-
-        }
-    }
-}
-
-.main-image {
-    position: relative;
-    margin-left: 20px;
-
-    width: 60%;
-
-    .btns {
-
-        .negative,
-        .plus {
-            position: absolute;
-            bottom: -50px;
-            background-color: $main-color;
-            border: none;
-            background-color: #fff !important;
-            color: #000;
-        }
-
-        .negative {
-            left: 20%;
-        }
-
-        .plus {
-            right: 20%;
-        }
-
-    }
-
-    #parent {
-
-        border-radius: 20px;
-        transition: all 1s;
-
-
-        &:hover {
-            transform: scale(1.1);
-
-
-        }
-
-    }
 }
 
 

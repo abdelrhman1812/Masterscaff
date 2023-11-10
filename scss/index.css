@@ -1155,6 +1155,40 @@ footer .row-footer {
 }
 
 /* ========== polivardo Page =============== */
+.project-id .imagee {
+  padding-bottom: 20px;
+  position: relative;
+}
+.project-id .imagee::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e11739;
+}
+.project-id .imagee::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #001e57;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-id .imagee img {
+  transition: all 1s;
+}
+.project-id .imagee img:hover {
+  transform: scale(1.1);
+}
+
 .polivardo h1 {
   color: #e11739;
 }
@@ -1173,44 +1207,6 @@ footer .row-footer {
 .bg-sec {
   background-color: #fff;
   padding: 10px;
-}
-
-.slider-img {
-  width: 30%;
-}
-.slider-img .child {
-  transition: all 1s;
-}
-.slider-img .child:hover {
-  transform: scale(1.1);
-}
-
-.main-image {
-  position: relative;
-  margin-left: 20px;
-  width: 60%;
-}
-.main-image .btns .negative,
-.main-image .btns .plus {
-  position: absolute;
-  bottom: -50px;
-  background-color: #e11739;
-  border: none;
-  background-color: #fff !important;
-  color: #000;
-}
-.main-image .btns .negative {
-  left: 20%;
-}
-.main-image .btns .plus {
-  right: 20%;
-}
-.main-image #parent {
-  border-radius: 20px;
-  transition: all 1s;
-}
-.main-image #parent:hover {
-  transform: scale(1.1);
 }
 
 /* ======================== Contacts page ============= */
