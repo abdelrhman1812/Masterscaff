@@ -965,6 +965,10 @@ footer {
         text-align: center;
         height: 250px;
 
+        @include responsive(761px) {
+            height: auto;
+        }
+
         h3 {
             padding: 10px;
             color: $main-color;

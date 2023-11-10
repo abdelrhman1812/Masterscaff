@@ -692,6 +692,11 @@ footer .row-footer {
   text-align: center;
   height: 250px;
 }
+@media (max-width: 761px) {
+  .mission .text {
+    height: auto;
+  }
+}
 .mission .text h3 {
   padding: 10px;
   color: #e11739;
