@@ -3,26 +3,26 @@
 
 
 /* increment Number in section in home page */
-let nums=document.querySelectorAll(".num")
+let nums = document.querySelectorAll(".num")
 console.log(nums)
 
-let interval=5000;
+let interval = 5000;
 
-nums.forEach((num)=>{
+nums.forEach((num) => {
 
-  let startValue=0;
-  let endValue=parseInt(num.getAttribute("data-val"));
+  let startValue = 0;
+  let endValue = parseInt(num.getAttribute("data-val"));
   console.log(endValue);
 
-  let duration=Math.floor(interval / endValue);
-  let counter=setInterval(()=>{
+  let duration = Math.floor(interval / endValue);
+  let counter = setInterval(() => {
 
-    startValue +=1;
-    num.textContent=startValue;
-    if(startValue ==endValue){
+    startValue += 1;
+    num.textContent = startValue;
+    if (startValue == endValue) {
       clearInterval(counter)
     }
-  },duration)
+  }, duration)
 
 })
 
@@ -134,11 +134,11 @@ iClose.addEventListener("click", function () {
 
 
 /* ================================= videos ================================== */
-let madiaLayout=document.getElementById("madiaLayout")
-let media=document.getElementById("media")
+let madiaLayout = document.getElementById("madiaLayout")
+let media = document.getElementById("media")
 console.log(media)
 
-let allVideo=["media/home.webm","media/about.webm","media/system.webm","media/projects.webm","media/download.webm","media/events.webm", ]
+let allVideo = ["media/home.webm", "media/about.webm", "media/system.webm", "media/projects.webm", "media/download.webm", "media/events.webm",]
 
 let modifiedVideo = allVideo.map(video => {
   return video.replace("media/", "").replace(".webm", "");
@@ -146,11 +146,11 @@ let modifiedVideo = allVideo.map(video => {
 
 console.log(modifiedVideo);
 
-function displayVideo(){
-  let emptyy=""
-  for(let i = 0 ;i<allVideo.length ;i++){
+function displayVideo() {
+  let emptyy = ""
+  for (let i = 0; i < allVideo.length; i++) {
     emptyy +=
-    `
+      `
     <div class="col-md-6 col-lg-4  wow animate__animated animate__zoomIn animate__slow ">
     <div class="event-item">
         <div class="video shadow">
@@ -171,9 +171,9 @@ function displayVideo(){
 </div>
     
     `
-    
+
   }
-  media.innerHTML=emptyy
+  media.innerHTML = emptyy
 }
 
 
@@ -181,9 +181,9 @@ function displayVideo(){
 displayVideo()
 
 
-function displaymadiaLayout(idx){
+function displaymadiaLayout(idx) {
   madiaLayout.classList.remove("d-none")
-  madiaLayout.innerHTML =  `
+  madiaLayout.innerHTML = `
   <div class="col-md-6  col-lg-4   ">
   <div class="video position-relative">
   <i class=" fa-solid fa-xmark position-absolute top-0 end-0 z-idx  cursor  p-2" onclick="dNonemadiaLayout()"></i>
@@ -195,10 +195,10 @@ function displaymadiaLayout(idx){
   </div>
 </div>
 `
-  
+
 }
 
-function dNonemadiaLayout(){
+function dNonemadiaLayout() {
   madiaLayout.classList.add("d-none")
   console.log("close")
 
@@ -214,7 +214,7 @@ function changeColor() {
   let scroll = window.scrollY;
   if (scroll < 150) {
     navbar.classList.remove("bg-nav");
-    
+
   } else {
     navbar.classList.add("bg-nav");
   }
